@@ -1,9 +1,11 @@
+
+require('dotenv').config();
 const express = require('express')
 const ejs = require('ejs')
 const path = require('path')
 const app = express()
 const bodyParser = require('body-parser')
-const port = process.env.PORT || 3500
+const port = process.env.PORT
 const urlencodedParser = bodyParser.urlencoded({extended : false })
 const partialsPath = path.join(__dirname, '../templates/partials')
 const publicDirectoryPath = path.join(__dirname, '../public')
